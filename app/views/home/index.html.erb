@@ -1,0 +1,21 @@
+<h1>Bem-vindo ao Sistema de Pousada</h1>
+
+<% if user_signed_in? %>
+  <p> Olá, <%= current_user.email %>!</p>
+  <% if current_user.admin? %>
+    <h2>Administração</h2>
+    <ul>
+      <li><%= link_to 'Adicionar Quarto', new_quarto_path %></li>
+      <li><%= link_to 'Adicionar Funcionário', new_funcionario_path %></li>
+      <li><%= link_to 'Gerenciar Hóspedes', hospedes_path %></li>
+      <li><%= link_to 'Gerenciar Reservas', reservas_path %></li>
+      <li><%= link_to 'Gerenciar Usuários', users_path %></li>
+    </ul>
+    <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+  <% elsif current_user.funcionario? %>
+    <h2>Bem-vindo, Funcionário</h2>
+    <!-- Links e opções específicas para funcionários -->
+  <% end %>
+<% else %>
+  <%= link_to 'Sair', destroy_user_session_path, method: :delete, data: { confirm: "Tem certeza que deseja sair?" } %>
+<% end %>

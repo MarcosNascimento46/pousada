@@ -42,6 +42,7 @@
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.7, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.20, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v3.1.8, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.18.4, ruby-3.3.5-p100) [gem]" level="application" />
@@ -54,6 +55,7 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.3.4, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.2, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.9.4, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, ruby-3.3.5-p100) [gem]" level="application" />
@@ -78,11 +80,13 @@
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.5.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.3, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.16.7, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.26.3, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.3.5.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="psych (v5.1.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v6.0.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v6.4.3, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pundit (v2.4.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.8.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v3.1.7, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-session (v2.0.0, ruby-3.3.5-p100) [gem]" level="application" />
@@ -97,6 +101,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.7.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.9.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.5.10, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v3.1.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.3.8, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.66.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.32.3, ruby-3.3.5-p100) [gem]" level="application" />
@@ -120,6 +125,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2024.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v2.6.0, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="useragent (v0.16.10, ruby-3.3.5-p100) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.9, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.1, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrick (v1.8.2, ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.11, ruby-3.3.5-p100) [gem]" level="application" />
@@ -210,101 +216,101 @@
   </component>
   <component name="RailsPaths" isManagedAutomatically="true">
     <entry key="app">
-      <value>file://$USER_HOME$/pousada\app</value>
+      <value>file://$MODULE_DIR$/../pusada\app</value>
     </entry>
     <entry key="app/assets">
-      <value>file://$USER_HOME$/pousada\app/assets</value>
+      <value>file://$MODULE_DIR$/../pusada\app/assets</value>
     </entry>
     <entry key="app/channels">
-      <value>file://$USER_HOME$/pousada\app/channels</value>
+      <value>file://$MODULE_DIR$/../pusada\app/channels</value>
     </entry>
     <entry key="app/controllers">
-      <value>file://$USER_HOME$/pousada\app/controllers</value>
+      <value>file://$MODULE_DIR$/../pusada\app/controllers</value>
     </entry>
     <entry key="app/helpers">
-      <value>file://$USER_HOME$/pousada\app/helpers</value>
+      <value>file://$MODULE_DIR$/../pusada\app/helpers</value>
     </entry>
     <entry key="app/mailers">
-      <value>file://$USER_HOME$/pousada\app/mailers</value>
+      <value>file://$MODULE_DIR$/../pusada\app/mailers</value>
     </entry>
     <entry key="app/models">
-      <value>file://$USER_HOME$/pousada\app/models</value>
+      <value>file://$MODULE_DIR$/../pusada\app/models</value>
     </entry>
     <entry key="app/views">
-      <value>file://$USER_HOME$/pousada\app/views</value>
+      <value>file://$MODULE_DIR$/../pusada\app/views</value>
     </entry>
     <entry key="config">
-      <value>file://$USER_HOME$/pousada\config</value>
+      <value>file://$MODULE_DIR$/../pusada\config</value>
     </entry>
     <entry key="config/cable">
-      <value>file://$USER_HOME$/pousada\config/cable.yml</value>
+      <value>file://$MODULE_DIR$/../pusada\config/cable.yml</value>
     </entry>
     <entry key="config/database">
-      <value>file://$USER_HOME$/pousada\config/database.yml</value>
+      <value>file://$MODULE_DIR$/../pusada\config/database.yml</value>
     </entry>
     <entry key="config/environment">
-      <value>file://$USER_HOME$/pousada\config/environment.rb</value>
+      <value>file://$MODULE_DIR$/../pusada\config/environment.rb</value>
     </entry>
     <entry key="config/environments">
-      <value>file://$USER_HOME$/pousada\config/environments</value>
+      <value>file://$MODULE_DIR$/../pusada\config/environments</value>
     </entry>
     <entry key="config/initializers">
-      <value>file://$USER_HOME$/pousada\config/initializers</value>
+      <value>file://$MODULE_DIR$/../pusada\config/initializers</value>
     </entry>
     <entry key="config/locales">
-      <value>file://$USER_HOME$/pousada\config/locales</value>
+      <value>file://$MODULE_DIR$/../pusada\config/locales</value>
     </entry>
     <entry key="config/routes">
-      <value>file://$USER_HOME$/pousada\config/routes</value>
+      <value>file://$MODULE_DIR$/../pusada\config/routes</value>
     </entry>
     <entry key="config/routes.rb">
-      <value>file://$USER_HOME$/pousada\config/routes.rb</value>
+      <value>file://$MODULE_DIR$/../pusada\config/routes.rb</value>
     </entry>
     <entry key="db">
-      <value>file://$USER_HOME$/pousada\db</value>
+      <value>file://$MODULE_DIR$/../pusada\db</value>
     </entry>
     <entry key="db/migrate">
-      <value>file://$USER_HOME$/pousada\db/migrate</value>
+      <value>file://$MODULE_DIR$/../pusada\db/migrate</value>
     </entry>
     <entry key="db/seeds.rb">
-      <value>file://$USER_HOME$/pousada\db/seeds.rb</value>
+      <value>file://$MODULE_DIR$/../pusada\db/seeds.rb</value>
     </entry>
     <entry key="lib">
-      <value>file://$USER_HOME$/pousada\lib</value>
+      <value>file://$MODULE_DIR$/../pusada\lib</value>
     </entry>
     <entry key="lib/assets">
-      <value>file://$USER_HOME$/pousada\lib/assets</value>
+      <value>file://$MODULE_DIR$/../pusada\lib/assets</value>
     </entry>
     <entry key="lib/tasks">
-      <value>file://$USER_HOME$/pousada\lib/tasks</value>
+      <value>file://$MODULE_DIR$/../pusada\lib/tasks</value>
     </entry>
     <entry key="lib/templates">
-      <value>file://$USER_HOME$/pousada\lib/templates</value>
+      <value>file://$MODULE_DIR$/../pusada\lib/templates</value>
     </entry>
     <entry key="log">
-      <value>file://$USER_HOME$/pousada\log/development.log</value>
+      <value>file://$MODULE_DIR$/../pusada\log/development.log</value>
     </entry>
     <entry key="public">
-      <value>file://$USER_HOME$/pousada\public</value>
+      <value>file://$MODULE_DIR$/../pusada\public</value>
     </entry>
     <entry key="public/javascripts">
-      <value>file://$USER_HOME$/pousada\public/javascripts</value>
+      <value>file://$MODULE_DIR$/../pusada\public/javascripts</value>
     </entry>
     <entry key="public/stylesheets">
-      <value>file://$USER_HOME$/pousada\public/stylesheets</value>
+      <value>file://$MODULE_DIR$/../pusada\public/stylesheets</value>
     </entry>
     <entry key="test/mailers/previews">
       <value>file://$MODULE_DIR$/test/mailers/previews</value>
-      <value>file://$USER_HOME$/pousada\test/mailers/previews</value>
+      <value>file://$MODULE_DIR$/../pusada\test/mailers/previews</value>
     </entry>
     <entry key="tmp">
-      <value>file://$USER_HOME$/pousada\tmp</value>
+      <value>file://$MODULE_DIR$/../pusada\tmp</value>
     </entry>
     <entry key="vendor">
-      <value>file://$USER_HOME$/pousada\vendor</value>
+      <value>file://$MODULE_DIR$/../pusada\vendor</value>
     </entry>
     <entry key="vendor/assets">
-      <value>file://$USER_HOME$/pousada\vendor/assets</value>
+      <value>file://$MODULE_DIR$/../pusada\vendor/assets</value>
     </entry>
   </component>
 </module>
