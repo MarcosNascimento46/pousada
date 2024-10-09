@@ -1,4 +1,4 @@
-class Quarto <
+class Quarto < ApplicationRecord
   has_many :reservas, dependent: :destroy
 
   validates :numero, presence: true, uniqueness: true, confirmation: { case_sensitive: false }
