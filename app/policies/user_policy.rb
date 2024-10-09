@@ -6,7 +6,7 @@ class UserPolicy < ApplicationPolicy
     @record = record
   end
 
-  if index?
+  def index?
     user.admin?
   end
 
