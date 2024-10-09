@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
   <p> Olá, <%= current_user.email %>!</p>
-  <% if current_user.admin? %>
+  <% if current_user.role == "admin" %>
     <h2>Administração</h2>
     <ul>
       <li><%= link_to 'Adicionar Quarto', new_quarto_path %></li>
@@ -12,10 +12,17 @@
       <li><%= link_to 'Gerenciar Usuários', users_path %></li>
     </ul>
     <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
-  <% elsif current_user.funcionario? %>
+  <% elsif current_user.role == "funcionario" %>
     <h2>Bem-vindo, Funcionário</h2>
-    <!-- Links e opções específicas para funcionários -->
+    <ul>
+      <li><%= link_to 'Gerenciar Reservas', reservas_path %></li>
+      <li><%= link_to 'Verificar Disponibilidade de Quartos', disponibilidade_quartos_path %></li>
+      <li><%= link_to 'Check-in de Hóspedes', new_checkin_path %></li>
+      <li><%= link_to 'Check-out de Hóspedes', new_checkout_path %></li>
+      <li><%= link_to 'Serviços de Quarto', servicos_path %></li>
+      <li><%= link_to 'Gerenciar Feedbacks', feedbacks_path %></li>
+    </ul>
   <% end %>
 <% else %>
-  <%= link_to 'Sair', destroy_user_session_path, method: :delete, data: { confirm: "Tem certeza que deseja sair?" } %>
+  <%= link_to 'Entrar', new_user_session_path %>
 <% end %>
