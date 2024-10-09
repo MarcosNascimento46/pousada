@@ -1,28 +1,72 @@
 <h1>Bem-vindo ao Sistema de Pousada</h1>
 
 <% if user_signed_in? %>
-  <p> Olá, <%= current_user.email %>!</p>
+  <p>Olá, <%= current_user.email %>!</p>
   <% if current_user.role == "admin" %>
     <h2>Administração</h2>
+
+    <h3>Gerenciamento de Hóspedes</h3>
     <ul>
-      <li><%= link_to 'Adicionar Quarto', new_quarto_path %></li>
-      <li><%= link_to 'Adicionar Funcionário', new_funcionario_path %></li>
-      <li><%= link_to 'Gerenciar Hóspedes', hospedes_path %></li>
-      <li><%= link_to 'Gerenciar Reservas', reservas_path %></li>
-      <li><%= link_to 'Gerenciar Usuários', users_path %></li>
+      <li><%= link_to 'Adicionar um hóspede', new_hospede_path %></li>
+      <li><%= link_to 'Remover um hóspede', hospedes_path %></li>
+      <li><%= link_to 'Listar todos os hóspedes', hospedes_path %></li>
+      <li><%= link_to 'Visualizar detalhes de um hóspede', '#' %></li>
+      <li><%= link_to 'Editar informações de um hóspede', '#' %></li>
+      <li><%= link_to 'Buscar um hóspede', search_hospedes_path %></li>
     </ul>
+
+    <h3>Gerenciamento de Funcionários</h3>
+    <ul>
+      <li><%= link_to 'Adicionar um funcionário', new_funcionario_path %></li>
+      <li><%= link_to 'Remover um funcionário', funcionarios_path %></li>
+      <li><%= link_to 'Listar todos os funcionários', funcionarios_path %></li>
+      <li><%= link_to 'Visualizar detalhes de um funcionário', '#' %></li>
+      <li><%= link_to 'Editar informações de um funcionário', '#' %></li>
+      <li><%= link_to 'Buscar um funcionário', search_funcionarios_path %></li>
+    </ul>
+
+
+    <h3>Gerenciamento de Quartos</h3>
+    <ul>
+      <li><%= link_to 'Adicionar um quarto', new_quarto_path %></li>
+      <li><%= link_to 'Remover um quarto', quartos_path %></li>
+      <li><%= link_to 'Listar todos os quartos', quartos_path %></li>
+      <li><%= link_to 'Visualizar detalhes de um quarto', '#' %></li>
+      <li><%= link_to 'Editar informações de um quarto', '#' %></li> s
+      <li><%= link_to 'Buscar um quarto', search_quartos_path %></li>
+    </ul>
+
+    <h3>Gerenciamento de Conta</h3>
+    <ul>
+      <li><%= link_to 'Criar uma conta de usuário', new_user_registration_path %></li>
+      <li><%= link_to 'Remover uma conta de usuário', users_path %></li>
+      <li><%= link_to 'Listar todas as contas', users_path %></li>
+      <li><%= link_to 'Visualizar detalhes de um conta', '#' %></li> <!-- Ou para um path específico -->
+      <li><%= link_to 'Editar informações de uma conta', '#' %></li> <!-- Ou para um path específico -->
+      <li><%= link_to 'Buscar uma conta', search_users_path %></li>
+    </ul>
+
     <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+
   <% elsif current_user.role == "funcionario" %>
     <h2>Bem-vindo, Funcionário</h2>
     <ul>
-      <li><%= link_to 'Gerenciar Reservas', reservas_path %></li>
-      <li><%= link_to 'Verificar Disponibilidade de Quartos', disponibilidade_quartos_path %></li>
-      <li><%= link_to 'Check-in de Hóspedes', new_checkin_path %></li>
-      <li><%= link_to 'Check-out de Hóspedes', new_checkout_path %></li>
-      <li><%= link_to 'Serviços de Quarto', servicos_path %></li>
-      <li><%= link_to 'Gerenciar Feedbacks', feedbacks_path %></li>
+      <h3>Gerenciamento de Reservas</h3>
+      <li><%= link_to 'Fazer uma reserva', new_reserva_path %></li>
+      <li><%= link_to 'Listar todas as reservas', reservas_path %></li>
+      <li><%= link_to 'Buscar uma reserva', search_reservas_path %></li>
+      <li><%= link_to 'Remover uma reserva', reservas_path %></li>
+    </ul>
+
+  <% elsif current_user.role == "hospede" %>
+    <h2>Bem-vindo, Hóspede</h2>
+    <ul>
+      <li><%= link_to 'Solicitar Reserva', new_reserva_path %></li>
+      <li><%= link_to 'Ver Minhas Reservas', reservas_path %></li>
+      <li><%= link_to 'Listar todos os quartos', quartos_path %></li>
     </ul>
   <% end %>
+
 <% else %>
   <%= link_to 'Entrar', new_user_session_path %>
 <% end %>

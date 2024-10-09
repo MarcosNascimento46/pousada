@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="5223e13e-c947-41ff-8066-14cb04aa0957" name="pousada: development Mapping">
+      <data-sources db="4d9bebd1-4146-4fbb-b2b5-561f261deae7" />
+      <scope>
+        <node kind="database" negative="1" />
+      </scope>
+    </mapping>
+  </component>
+</project>

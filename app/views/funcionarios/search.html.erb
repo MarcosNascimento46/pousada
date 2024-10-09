@@ -1,0 +1,11 @@
+<h1>Resultados da Busca</h1>
+
+<% if @funcionarios.any? %>
+  <ul>
+    <% @funcionarios.each do |funcionario| %>
+      <li><%= link_to funcionario.nome, funcionario_path(funcionario) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Nenhum funcionário encontrado.</p>
+<% end %>

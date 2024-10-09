@@ -1,0 +1,35 @@
+<h1>Nova Reserva</h1>
+
+<%= form_with(model: @reserva, local: true) do |form| %>
+  <% if @reserva.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reserva.errors.count, "erro") %> proibiu que a reserva fosse salva:</h2>
+      <ul>
+        <% @reserva.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :data_inicio %>
+    <%= form.date_select :data_inicio %>
+  </div>
+
+  <div>
+    <%= form.label :data_fim %>
+    <%= form.date_select :data_fim %>
+  </div>
+
+  <div>
+    <%= form.label :hospede_id %>
+    <%= form.collection_select :hospede_id, Hospede.all, :id, :nome %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', reservas_path %>
