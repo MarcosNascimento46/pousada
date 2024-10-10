@@ -1,0 +1,11 @@
+<h1>Resultados da Busca</h1>
+
+<% if @quartos.any? %>
+  <ul>
+    <% @quartos.each do |quarto| %>  <!-- Corrigido aqui -->
+      <li><%= link_to quarto.nome, quarto_path(quarto) %></li> <!-- Corrigido aqui -->
+    <% end %>
+  </ul>
+<% else %>
+  <p>Nenhum quarto encontrado.</p>
+<% end %>

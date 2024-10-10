@@ -26,6 +26,11 @@ class QuartosController < ApplicationController
     @quarto = Quarto.find(params[:id])
   end
 
+  def search
+    @quartos = Quarto.where("nome LIKE ?", "%#{params[:query]}%")
+    render :index
+  end
+
   def update
     @quarto = Quarto.find(params[:id])
     if @quarto.update(quarto_params)

@@ -4,5 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum role: { admin: 0, funcionario: 1, hospede: 2 }
+  enum :role, [:admin, :funcionario, :hospede]
+
+  def admin?
+    role == 'admin'
+  end
+
+  def funcionario?
+    role == 'funcionario'
+  end
+
 end

@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Quartos" %>
+
+<h1>Quartos</h1>
+<%= form_with url: search_quartos_path, method: :get, local: true do %>
+  <%= label_tag :query, "Buscar por nome:" %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Buscar" %>
+<% end %>
+<div id="quartos">
+  <% @quartos.each do |quarto| %>
+    <%= render quarto %>
+    <p>
+      <%= link_to "Show this quarto", quarto %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New quarto", new_quarto_path %>
+<%= link_to "Voltar para a página principal", root_path %>

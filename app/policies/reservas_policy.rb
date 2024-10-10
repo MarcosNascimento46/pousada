@@ -3,6 +3,10 @@ class ReservasPolicy < ApplicationPolicy
     funcionario?
   end
 
+  def new?
+    user.admin? || user.funcionario?
+  end
+
   def show?
     funcionario?
   end

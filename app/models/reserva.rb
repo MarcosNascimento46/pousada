@@ -1,5 +1,6 @@
 class Reserva < ApplicationRecord
   belongs_to :hospede
+  belongs_to :user
   belongs_to :quarto
 
 

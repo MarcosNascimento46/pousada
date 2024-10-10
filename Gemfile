@@ -20,8 +20,6 @@ gem "jbuilder"
 # gem "redis", ">= 4.0.1"
 gem "pundit"
 
-gem 'obstruct'
-
 gem "devise"
 
 gem "tzinfo-data", platforms: %i[ windows jruby ]

@@ -1,3 +1,15 @@
+<% if @hospede.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@hospede.errors.count, "error") %> prohibited this hospede from being saved:</h2>
+
+    <ul>
+      <% @hospede.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <% content_for :title, "New hospede" %>
 
 <h1>New hospede</h1>

@@ -1,0 +1,112 @@
+/* Estilos gerais para o cabeçalho */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para a mensagem de erro */
+#error_explanation {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para os rótulos do formulário */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block; /* Para garantir que o rótulo ocupe toda a largura */
+}
+
+/* Estilos para os campos do formulário */
+div {
+    margin-bottom: 15px;
+}
+
+/* Estilos para o botão de envio */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o título da reserva */
+.reserva-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para o contêiner de detalhes da reserva */
+.reserva-details {
+    margin: 0 auto;
+    max-width: 600px; /* Limitar a largura do contêiner */
+}
+
+/* Estilos para os itens de detalhes da reserva */
+.reserva-item {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Estilos para os valores dos detalhes da reserva */
+.reserva-value {
+    color: #007bff; /* Cor diferente para os valores */
+    font-weight: bold;
+}
+
+/* Estilos para o contêiner de links */
+.reserva-links {
+    text-align: center; /* Centralizar os links */
+    margin-top: 20px;
+}
+
+/* Estilos para os links de ação */
+.btn-edit,
+.btn-back {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    border: 1px solid #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.btn-edit:hover,
+.btn-back:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}

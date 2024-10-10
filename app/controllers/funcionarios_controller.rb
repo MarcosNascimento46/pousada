@@ -27,6 +27,9 @@ class FuncionariosController < ApplicationController
     @funcionario = Funcionario.find(params[:id])
   end
 
+  def search
+    @funcionarios = Funcionario.where("nome LIKE ?", "%#{params[:query]}%")
+  end
   def update
     @funcionario = Funcionario.find(params[:id])
     if @funcionario.update(funcionario_params)
@@ -45,7 +48,7 @@ class FuncionariosController < ApplicationController
   private
 
   def funcionario_params
-    params.require(:funcionario).permit(:nome, :cargo, :data_contratacao)
+    params.require(:funcionario).permit(:nome, :cargo, :cpf)
   end
 
   def authorize_admin

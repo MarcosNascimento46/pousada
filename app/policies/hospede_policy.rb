@@ -1,21 +1,21 @@
 class HospedePolicy < ApplicationPolicy
   def index?
-    admin?
+    user.admin?
   end
 
   def show?
-    admin?
+    user.admin?
   end
 
   def create?
-    admin?
+    user.admin?
   end
 
   def update?
-    admin?
+    user.admin?
   end
 
   def destroy?
-    admin?
+    user.admin?
   end
 end
