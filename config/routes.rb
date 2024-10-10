@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "reservas/new"
   get "reservas/edit"
   root to: "home#index"
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'devise/registrations' }
 
   resources :hospedes do
     collection do
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       get :search, to: 'quartos#search'
     end
   end
-  resources :users do
+  resources :users, only: [:index, :create, :destroy] do
     collection do
       get :search, to: 'users#search'
     end

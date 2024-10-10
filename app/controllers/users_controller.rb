@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user, notice: 'Usuário criado com sucesso.'
+      sign_out(current_user) if current_user # Logout do usuário atual
+      redirect_to root_path, notice: 'Conta criada com sucesso. Faça login com sua nova conta.'
     else
       render :new
     end
@@ -42,9 +43,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to users_url, notice: 'Usuário removido com sucesso.'
+    user = User.find(params[:id])
+    user.destroy
+    sign_out(current_user) if current_user
+    redirect_to root_path, notice: 'Conta removida com sucesso.'
   end
 
   private

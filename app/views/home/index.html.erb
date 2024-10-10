@@ -33,7 +33,7 @@
     <h3>Gerenciamento de Conta</h3>
     <ul>
       <li><%= link_to 'Criar uma conta de usuário', new_user_registration_path %></li>
-      <li><%= link_to 'Remover uma conta de usuário', users_path %></li>
+      <li><%= link_to 'Remover uma conta de usuário', users_path, method: :delete %></li>
       <li><%= link_to 'Listar todas as contas', users_path %></li>
       <li><%= link_to 'Buscar uma conta', search_users_path %></li>
     </ul>
